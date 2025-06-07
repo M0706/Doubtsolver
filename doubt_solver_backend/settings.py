@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'doubt_solver_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gmat_solver_db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '',  # Add password if you've set one
         'HOST': 'localhost',
