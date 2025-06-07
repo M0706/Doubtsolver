@@ -84,8 +84,16 @@ WSGI_APPLICATION = 'doubt_solver_backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv('DATABASE_URL', 'postgresql://manavgarg:postgres@localhost:5432/postgres'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gmat_solver_db',
+        'USER': 'postgres',
+        'PASSWORD': '',  # Add password if you've set one
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
 
 
 # Password validation
